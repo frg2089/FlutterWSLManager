@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <Target Name="CopyScript" BeforeTargets="CoreCompile">
+    <Copy SourceFiles="script.bat" DestinationFiles="$(OutputPath)flutter.bat"/>
+    <Copy SourceFiles="script.bat" DestinationFiles="$(OutputPath)dart.bat"/>
+    <Copy SourceFiles="script.sh" DestinationFiles="$(OutputPath)flutter"/>
+    <Copy SourceFiles="script.sh" DestinationFiles="$(OutputPath)dart"/>
+  </Target>
+
+</Project>
